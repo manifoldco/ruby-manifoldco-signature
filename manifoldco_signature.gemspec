@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jbowes@repl.ca"]
 
   spec.summary       = "Verify signed HTTP requests from Manifold"
-  spec.homepage      = "https://github.com/manifoldco/ruby-manifoldco-signaturek"
+  spec.homepage      = "https://github.com/manifoldco/ruby-manifoldco-signature"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
