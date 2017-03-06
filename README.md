@@ -18,3 +18,14 @@ Or install it yourself as:
 
     $ gem install manifoldco_signature
 
+## Usage
+
+```ruby
+require 'manifoldco_signature'
+
+# initialize once per application
+verifier = ManifoldcoSignature::Verifier.new
+
+# verify a Rack::Request. returns a boolean.
+verifier.valid? request
+```
