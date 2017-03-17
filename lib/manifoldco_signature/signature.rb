@@ -59,6 +59,9 @@ module ManifoldcoSignature
         msg += "#{header.downcase}: #{value}\n"
       end
 
+      # Rewind the body before and after reading, in case anyone else has read
+      # it before us, or anyone else will read it after us.
+      req.body.rewind
       msg += req.body.read
       req.body.rewind
 
