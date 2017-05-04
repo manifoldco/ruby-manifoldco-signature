@@ -39,7 +39,7 @@ module ManifoldcoSignature
     protected
     def canonize(req)
 
-      msg = "#{req.request_method.downcase} #{req.path_info}"
+      msg = "#{req.request_method.downcase} #{req.path}"
 
       if !req.query_string.empty?
         msg += '?' + req.query_string.split('&').sort!.join('&')
